@@ -57,12 +57,12 @@ export default function Home() {
               <p>PIEChain | Singapore, Dec 2021</p>
             </li>
             <li>
-              <p>First Price, National Blockchain Challenge, </p>
+              <p>First Price, National Blockchain Challenge</p>
               <p>BlockBuster | Singapore, Jun 2019</p>
             </li>
             <li>
-              <p>First Price, Asian ICT Awards, Ubud-Bali</p>
-              <p>ICS-BlockOps | Indonesia, Dec 2018PIEChain</p>
+              <p>First Price, Asian ICT Awards</p>
+              <p>ICS-BlockOps | Indonesia, Dec 2018</p>
             </li>
           </ul>
         </div>
