@@ -1,28 +1,35 @@
-.main {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 6rem;
-  padding: 6rem 10rem;
-  min-height: 100vh;
+.namecard {
+  position: fixed;
+  top: 0px;
+  left: 150px;
+  padding: 6rem 1rem 2rem 1rem;
+  width: 300px;
+  text-align: center;
+  overflow-y: auto;
+  max-height: 100%;
 }
 
-.namecard {
-  min-width: 200px;
-  text-align: center;
+.about {
+  padding: 6rem 20% 6rem 480px;
 }
 
 .name {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  color: rgba(var(--foreground-rgb), 0.8);
-  font-weight: 300;
+}
+
+.portraitBox {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 0.2rem solid rgb(var(--foreground-rgb));
 }
 
 .portrait {
   border-radius: 50%;
-  border: 0.2rem solid rgb(var(--foreground-rgb));
+  border: 0.1rem solid rgb(var(--background-rgb));
 }
 
 .contact {
@@ -30,6 +37,9 @@
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
+}
+
+.namecard .contact {
   padding-top: 4rem;
 }
 
@@ -41,35 +51,60 @@
   transition: 200ms;
 }
 
-.about {
-  padding-bottom: 10rem;
-}
-
 .hello {
   margin-bottom: 2rem;
 }
 
 .about p {
   margin-bottom: 2rem;
-  line-height: 2;
+  line-height: 1.5;
 }
 
+@media (max-width: 1400px) {
+  .namecard {
+    left: 40px;
+  }
+
+  .about {
+    padding: 6rem 10% 6rem 340px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .namecard {
+    left: 0px;
+  }
+
+  .about {
+    padding: 6rem 1rem 6rem 300px;
+  }
+}
 
 /* Mobile */
 @media (max-width: 700px) {
-  .main {
+  .namecard {
+    position: inherit;
+    width: 100%;
     padding: 1rem;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  }
+
+  .about {
+    width: 100%;
+    padding: 1rem;
+    padding-bottom: 10rem;
+  }
+
+  .namecard .contact {
+    display: none;
   }
 
   .hello {
     display: none;
   }
 
-  .namecard .contact {
-    display: none;
+  .portraitBox {
+    width: 100px;
+    height: 100px;
   }
 
   .bottomBar {
@@ -77,8 +112,8 @@
     width: 100%;
     position: fixed;
     bottom: 0;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
     background: linear-gradient(
       to bottom,
       transparent 0%,
