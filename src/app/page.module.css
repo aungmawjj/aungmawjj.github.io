@@ -24,12 +24,12 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 0.2rem solid rgb(var(--foreground-rgb));
+  border: 0.2rem solid rgb(var(--portrait-border));
 }
 
 .portrait {
   border-radius: 50%;
-  border: 0.1rem solid rgb(var(--background-rgb));
+  border: 0.2rem solid rgb(var(--background-rgb));
 }
 
 .contact {
@@ -68,7 +68,6 @@
 
 .section p {
   margin-bottom: 1rem;
-  line-height: 1.5;
 }
 
 .section li {
@@ -93,6 +92,10 @@
   font-size: small;
   font-weight: bold;
   color: rgba(var(--foreground-rgb), 0.6);
+}
+
+.section li p.projectDesc {
+  margin-bottom: 1rem;
 }
 
 .textLink {
@@ -154,11 +157,7 @@
     bottom: 0;
     padding-top: 4rem;
     padding-bottom: 1rem;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-rgb)) 40%
-    );
+    background: linear-gradient(to bottom, transparent 0%, rgb(var(--background-rgb)) 40%);
     z-index: 1;
   }
 }
