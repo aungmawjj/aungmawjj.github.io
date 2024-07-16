@@ -24,12 +24,10 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 0.2rem solid rgb(var(--portrait-border));
 }
 
 .portrait {
   border-radius: 50%;
-  border: 0.2rem solid rgb(var(--background-rgb));
 }
 
 .contact {
@@ -71,8 +69,8 @@
 }
 
 .section li {
-  padding-left: 1rem;
-  margin-left: 1.5rem;
+  padding-left: 0.2rem;
+  margin-left: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -96,6 +94,21 @@
 
 .section li p.projectDesc {
   margin-bottom: 1rem;
+}
+
+.certificate {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 0rem;
+  align-items: center;
+}
+
+.certificate a {
+  line-height: 1;
+}
+
+.badge {
+  transition: 200ms;
 }
 
 .textLink {
@@ -128,7 +141,7 @@
   .namecard {
     position: inherit;
     width: 100%;
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
 
   .about {
@@ -146,8 +159,8 @@
   }
 
   .portraitBox {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
 
   .bottomBar {
@@ -178,5 +191,11 @@
 @media (prefers-reduced-motion) {
   .contact .logo:hover {
     transform: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .badge:hover {
+    transform: translateY(-8px);
   }
 }
